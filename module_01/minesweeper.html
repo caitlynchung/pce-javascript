@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Minesweeper</title>
+   <script>
+	// *********************************************
+	// **    Code Author:   Caitlyn Chung
+	// **    Date: 2017-10-09                        
+	// **    Description: Minesweeper Game
+	// **    
+	// **********************************************
+	// **       Change Log 
+	// **     2017-10-09 Added header and changelog. Cliff Knopik
+        // **     2017-10-15 Added user greeting
+	// **********************************************
+        // Prompt the user for name, default to 'Annonymous'
+        // if the user hit Cancel or entered nothing and clicked 'OK'
+        var userName = prompt("What is your name?");
+        if (userName == null || !userName) {
+            userName = "Annonymous";
+        // If a name is entered, format it so the first letter is capitalized
+        // i.e. 'jane smith doe' returns 'Jane Smith Doe'
+        } else {
+            // Turn the input string into an array of components (first, middle, last)
+            // Then loop through the array and capitalize the first letter
+            userName = userName.split(" ");
+            for (i=0;i<userName.length;i++) {
+                userName[i] = userName[i].toString().charAt(0).toUpperCase() +
+                              userName[i].slice(1);
+            };
+            userName = userName.join(" ");
+        }
+        alert("Welcome, " + userName + "!");
+   </script>
+</head>
+<body>
+<p>Let's play minesweeper!</p>
+</body>
+</html>
