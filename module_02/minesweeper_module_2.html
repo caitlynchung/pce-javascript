@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>My First JavaScript</title>
+   <script>
+	// *********************************************
+	// **    Code Author:   Travis Breon
+	// **    Date: 10/13/17                        
+	// **    Description: Proect to create a browser based clone of minesweeper.
+	// **    
+	// **********************************************
+	// **       Change Log 
+	// **     10/09/17 – Added header and changelog. Cliff Knopik
+        // **     10/13/17 - Added script with function to display prompt for a user's
+        // **                name and then display a welcome message that includes the 
+        // **                entered name in an alert box.
+        // **     10/21/17 - Prompt for name until one is provided. Prompt for width of
+        // **                minesweeper game. Caitlyn Chung
+	// **********************************************
+	
+	
+   </script>
+</head>
+<body>
+<script language="javascript">
+       // Declare var person and give it value of entered name
+       var person = prompt("What's your name?");
+       while (person == null || !person) {
+         person = prompt("What's your name?");
+       };
+       // Display alert with var person and message
+       alert("Nice to meet you " + person +"!");
+       var mineWidth = 0;
+       // Prompt for display width (at least 5) then show that many '0's
+       do {
+         mineWidth = prompt("Enter width of minefield (at least 5)");
+       } while (mineWidth < 5);
+       document.write("0".repeat(mineWidth));
+       
+    </script>
+</body>
+</html>

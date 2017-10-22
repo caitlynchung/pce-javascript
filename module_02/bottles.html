@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>99 Bottles of Beer on the Wall</title>
+</head>
+<body>
+	<h1>99 Bottles of Beer</h1>
+	<script> 
+        // *********************************************
+        // **    Code Author:   Caitlyn Chung
+        // **    Date: 10/21/17
+        // **    Description: 99 Bottles of Beer Lyrics
+        // **
+        // **********************************************
+        // **       Change Log
+        // **     10/21/2017 – Corrected grammatical error re: 1 bottle of beer
+        // **********************************************
+        var count = 99;
+        var word = "bottles";
+
+        var wordPlural = word;
+        var wordSingular = word.slice(0, word.length -1); //remove last letter 
+        // loop over all the bottles and display the lyrics
+        while (count > 0) {
+          document.write(count + " " + word + " of beer on the wall,<br>");
+          document.write(count + " " + word + " of beer,<br>");
+          document.write("Take one down, pass it around,<br>");
+          count = count - 1;
+          // If after taking one down, the count is one, switch over to singular form of word
+          // If after taking one down, the count is zero, switch back to plural form of word
+          if (count === 1) {
+            word = wordSingular;
+          } else {
+            word = wordPlural;
+          }
+          if (count > 0) {
+            document.write(count + " " + word + " of beer on the wall.<br>");
+          } else {
+            document.write("No more " + word + " of beer on the wall.<br>");
+          }
+        }
+  </script>
+</body>
+</html>

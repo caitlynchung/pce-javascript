@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Madlibs</title>
+</head>
+<body>
+	<h1>Let's Play Madlibs</h1>
+	<script> 
+        // *********************************************
+        // **    Code Author:   Caitlyn Chung
+        // **    Date: 10/21/17
+        // **    Description: Build a string in madlibs-style
+        // **
+        // **********************************************
+        // **       Change Log
+        // **     10/21/2017 – Created
+        // **********************************************
+        // Collect four components to build a madlibs sentence
+        var exclamation = prompt('Enter an exclamation');
+        var adverb = prompt('Enter an adverb');
+        var noun = prompt('Enter a noun');
+        var adjective = prompt('Enter an adjective');
+        // Use components to build out the full sentence
+        var madlibSentence = (exclamation + "! he said " + adverb +
+                              " as he jumped into his convertible " +
+                              noun +  " and drove off with his " + 
+                              adjective + " wife.");
+        document.write(madlibSentence);
+  </script>
+</body>
+</html>

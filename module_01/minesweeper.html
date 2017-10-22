@@ -25,7 +25,8 @@
             // Turn the input string into an array of components (first, middle, last)
             // Then loop through the array and capitalize the first letter
             userName = userName.split(" ");
-            for (i=0;i<userName.length;i++) {
+            var i = 0; //initalize
+            for (i;i<userName.length;i++) {
                 userName[i] = userName[i].toString().charAt(0).toUpperCase() +
                               userName[i].slice(1);
             };
